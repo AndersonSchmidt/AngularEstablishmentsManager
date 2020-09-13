@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { Establishment } from './establishment.model';
 
 @Injectable({
   providedIn: 'root',
@@ -8,8 +9,8 @@ import { Observable } from 'rxjs';
 export class EstablishmentService {
   constructor(private http: HttpClient) {}
 
-  getEstablishments(): Observable<any> {
-    return this.http.get<any>(
+  getEstablishments(): Observable<Establishment[]> {
+    return this.http.get<Establishment[]>(
       'https://my-json-server.typicode.com/james-delivery/frontend-challenge/establishments'
     );
   }

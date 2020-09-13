@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { EstablishmentService } from './establishment.service';
+import { Establishment } from './establishment.model';
 
 @Component({
   selector: 'app-establishments',
@@ -7,7 +8,7 @@ import { EstablishmentService } from './establishment.service';
   styleUrls: ['./establishments.component.css'],
 })
 export class EstablishmentsComponent implements OnInit {
-  establishments = [];
+  establishments: Establishment[];
 
   constructor(private establishmentService: EstablishmentService) {}
 
@@ -16,7 +17,6 @@ export class EstablishmentsComponent implements OnInit {
       .getEstablishments()
       .subscribe((establishments) => {
         this.establishments = establishments;
-        console.log(establishments);
       });
   }
 }
