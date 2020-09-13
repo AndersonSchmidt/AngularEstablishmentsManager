@@ -1,0 +1,12 @@
+.header {
+  height: 45px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.logo {
+  width: 45px;
+  opacity: 50%;
+  margin-top: 5px;
+}
