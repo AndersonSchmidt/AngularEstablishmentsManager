@@ -14,4 +14,11 @@ export class EstablishmentService {
       'https://my-json-server.typicode.com/james-delivery/frontend-challenge/establishments'
     );
   }
+
+  getEstablishment(id: string): Observable<Establishment> {
+    return this.http.get<Establishment>(
+      'https://my-json-server.typicode.com/james-delivery/frontend-challenge/establishments/' +
+        id
+    );
+  }
 }
