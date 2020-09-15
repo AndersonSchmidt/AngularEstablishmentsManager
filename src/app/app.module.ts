@@ -7,9 +7,10 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { EstablishmentsComponent } from './establishments/establishments.component';
 import { EstablishmentItemComponent } from './establishments/establishment-item/establishment-item.component';
+import { EstablishmentDetailComponent } from './establishments/establishment-detail/establishment-detail.component';
 
 @NgModule({
-  declarations: [AppComponent, HeaderComponent, EstablishmentsComponent, EstablishmentItemComponent],
+  declarations: [AppComponent, HeaderComponent, EstablishmentsComponent, EstablishmentItemComponent, EstablishmentDetailComponent],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],
   bootstrap: [AppComponent],

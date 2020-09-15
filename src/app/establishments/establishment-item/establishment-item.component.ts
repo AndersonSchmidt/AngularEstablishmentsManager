@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Establishment } from '../establishment.model';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-establishment-item',
@@ -9,7 +10,11 @@ import { Establishment } from '../establishment.model';
 export class EstablishmentItemComponent implements OnInit {
   @Input() establishment: Establishment;
 
-  constructor() {}
+  constructor(private router: Router) {}
 
   ngOnInit(): void {}
+
+  onClick(): void {
+    this.router.navigate(['establishments', this.establishment.id]);
+  }
 }
