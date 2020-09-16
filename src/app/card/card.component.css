@@ -1,0 +1,10 @@
+.card {
+  background-color: white;
+  border: 1px solid #f9f9f9;
+  border-radius: 5px;
+  display: flex;
+
+  -webkit-box-shadow: -6px 0 #f8f9fd, 6px 0 #f8f9fd, 0 2px 5px -6px black;
+  -moz-box-shadow: -6px 0 #f8f9fd, 6px 0 #f8f9fd, 0 2px 5px -6px black;
+  box-shadow: -6px 0 #f8f9fd, 6px 0 #f8f9fd, 0 2px 5px -6px black;
+}

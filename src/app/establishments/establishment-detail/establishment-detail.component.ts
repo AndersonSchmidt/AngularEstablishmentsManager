@@ -12,6 +12,8 @@ export class EstablishmentDetailComponent implements OnInit {
   establishment: Establishment;
   id = this.route.snapshot.params.id;
 
+  cardStyle = { padding: '10px 25px 30px 25px' };
+
   constructor(
     private establishmentService: EstablishmentService,
     private route: ActivatedRoute

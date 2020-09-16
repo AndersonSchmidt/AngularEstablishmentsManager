@@ -10,6 +10,13 @@ import { Router } from '@angular/router';
 export class EstablishmentItemComponent implements OnInit {
   @Input() establishment: Establishment;
 
+  cardStyle = {
+    'margin-bottom': '6px',
+    'flex-direction': 'row',
+    padding: '7px',
+    cursor: 'pointer',
+  };
+
   constructor(private router: Router) {}
 
   ngOnInit(): void {}
