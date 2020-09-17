@@ -3,7 +3,10 @@
     <div class="col">
       <app-card [cardStyle]="cardStyle">
         <div class="header-container">
-          <i class="fas fa-long-arrow-alt-left arrow-icon"></i>
+          <i
+            class="fas fa-long-arrow-alt-left arrow-icon"
+            (click)="onGoBack()"
+          ></i>
           <div class="picture-container">
             <img [src]="establishment.picture" width="100%" />
           </div>

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { EstablishmentService } from '../establishment.service';
 import { Establishment } from '../establishment.model';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-establishment-detail',
@@ -16,7 +16,8 @@ export class EstablishmentDetailComponent implements OnInit {
 
   constructor(
     private establishmentService: EstablishmentService,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private router: Router
   ) {}
 
   ngOnInit(): void {
@@ -25,5 +26,9 @@ export class EstablishmentDetailComponent implements OnInit {
       .subscribe((establishment) => {
         this.establishment = establishment;
       });
+  }
+
+  onGoBack(): void {
+    this.router.navigate(['establishments']);
   }
 }
