@@ -17,6 +17,7 @@ input {
   font-family: "Rounded-Medium";
   font-size: 14px;
   color: #81879d;
+  background-color: #fcfcfe;
 }
 
 input:focus {
