@@ -12,7 +12,7 @@ export class EstablishmentDetailComponent implements OnInit {
   establishment: Establishment;
   id = this.route.snapshot.params.id;
 
-  cardStyle = { padding: '20px 30px 35px 30px' };
+  cardStyle = { padding: '20px 30px 35px 30px', 'margin-bottom': '15px' };
 
   constructor(
     private establishmentService: EstablishmentService,

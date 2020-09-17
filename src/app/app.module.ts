@@ -10,6 +10,7 @@ import { EstablishmentItemComponent } from './establishments/establishment-item/
 import { EstablishmentDetailComponent } from './establishments/establishment-detail/establishment-detail.component';
 import { CardComponent } from './card/card.component';
 import { TextInputComponent } from './text-input/text-input.component';
+import { ButtonComponent } from './button/button.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { TextInputComponent } from './text-input/text-input.component';
     EstablishmentDetailComponent,
     CardComponent,
     TextInputComponent,
+    ButtonComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],

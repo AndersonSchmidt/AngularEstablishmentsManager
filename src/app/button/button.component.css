@@ -1,0 +1,11 @@
+input {
+  background-color: #93e5ce;
+  height: 40px;
+  border: none;
+  border-radius: 25px;
+  padding: 0 30px 0 30px;
+  color: white;
+  font-family: "Rounded-Bold";
+  font-size: 12px;
+  letter-spacing: 1px;
+}
