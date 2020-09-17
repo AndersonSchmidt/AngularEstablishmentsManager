@@ -4,6 +4,10 @@ body {
   color: #4c5164;
 }
 
+p {
+  margin-bottom: 0;
+}
+
 @font-face {
   font-family: "Rounded-Regular";
   src: url(./assets/fonts/Rounded-Regular.ttf);
@@ -12,4 +16,9 @@ body {
 @font-face {
   font-family: "Rounded-Bold";
   src: url(./assets/fonts/Rounded-Bold.ttf);
+}
+
+@font-face {
+  font-family: "Rounded-Medium";
+  src: url(./assets/fonts/Rounded-Medium.ttf);
 }
