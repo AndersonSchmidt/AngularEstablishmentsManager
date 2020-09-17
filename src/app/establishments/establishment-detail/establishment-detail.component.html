@@ -1,7 +1,54 @@
 <div class="container">
   <div class="row">
     <div class="col">
-      <app-card [cardStyle]="cardStyle">Establishment Detail</app-card>
+      <app-card [cardStyle]="cardStyle">
+        <div class="header-container">
+          <i class="fas fa-long-arrow-alt-left arrow-icon"></i>
+          <div class="picture-container">
+            <img [src]="establishment.picture" width="100%" />
+          </div>
+          <div class="name-container">
+            <p class="name">
+              {{ establishment.name }}
+            </p>
+            <p class="id">ID: {{ establishment.id }}</p>
+          </div>
+        </div>
+        <p class="section-title">Informações Básicas</p>
+        <hr />
+        <form>
+          <div class="row">
+            <div class="col">
+              <app-text-input
+                label="Nome"
+                id="nome"
+                [value]="establishment.name"
+              ></app-text-input>
+            </div>
+            <div class="col">
+              <app-text-input
+                label="Email"
+                id="email"
+                [value]="establishment.email"
+              ></app-text-input>
+            </div>
+            <div class="col">
+              <app-text-input
+                label="Telefone"
+                id="telefone"
+                [value]="establishment.phone"
+              ></app-text-input>
+            </div>
+            <div class="col">
+              <app-text-input
+                label="Endereço"
+                id="endereco"
+                [value]="establishment.address"
+              ></app-text-input>
+            </div>
+          </div>
+        </form>
+      </app-card>
     </div>
   </div>
 </div>

@@ -1,0 +1,39 @@
+.picture-container {
+  width: 60px;
+  height: 60px;
+  border-radius: 3px;
+  overflow: hidden;
+  margin-right: 20px;
+}
+
+.header-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.arrow-icon {
+  font-size: 20px;
+  margin-right: 25px;
+}
+
+.name-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.name {
+  font-family: "Rounded-Bold";
+  font-size: 18px;
+}
+
+.id {
+  color: #81879d;
+  overflow: hidden;
+  font-size: 12px;
+}
+
+.section-title {
+  font-family: "Rounded-Medium";
+}
