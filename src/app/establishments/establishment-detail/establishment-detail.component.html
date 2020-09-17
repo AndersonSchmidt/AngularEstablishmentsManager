@@ -19,13 +19,13 @@
         </div>
         <p class="section-title">Informações Básicas</p>
         <hr />
-        <form>
+        <form (ngSubmit)="onSubmit()">
           <div class="row">
             <div class="col">
               <app-text-input
                 label="Nome"
                 id="nome"
-                [value]="establishment.name"
+                [(inputModel)]="establishment.name"
                 containerStyle="margin-bottom: 20px"
               ></app-text-input>
             </div>
@@ -33,7 +33,7 @@
               <app-text-input
                 label="Email"
                 id="email"
-                [value]="establishment.email"
+                [(inputModel)]="establishment.email"
                 containerStyle="margin-bottom: 20px"
               ></app-text-input>
             </div>
@@ -41,7 +41,7 @@
               <app-text-input
                 label="Telefone"
                 id="telefone"
-                [value]="establishment.phone"
+                [(inputModel)]="establishment.phone"
                 containerStyle="margin-bottom: 20px"
               ></app-text-input>
             </div>
@@ -49,7 +49,7 @@
               <app-text-input
                 label="Endereço"
                 id="endereco"
-                [value]="establishment.address"
+                [(inputModel)]="establishment.address"
               ></app-text-input>
             </div>
           </div>

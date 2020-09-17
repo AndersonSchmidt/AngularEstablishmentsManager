@@ -31,4 +31,8 @@ export class EstablishmentDetailComponent implements OnInit {
   onGoBack(): void {
     this.router.navigate(['establishments']);
   }
+
+  onSubmit(): void {
+    console.log(this.establishment);
+  }
 }

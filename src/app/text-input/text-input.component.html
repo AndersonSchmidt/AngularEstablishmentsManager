@@ -1,4 +1,9 @@
 <div [style]="containerStyle">
   <label [for]="id">{{ label }}</label>
-  <input type="text" [id]="id" [value]="value" />
+  <input
+    type="text"
+    [id]="id"
+    [(ngModel)]="inputModel"
+    (ngModelChange)="inputModelChange.emit(inputModel)"
+  />
 </div>
