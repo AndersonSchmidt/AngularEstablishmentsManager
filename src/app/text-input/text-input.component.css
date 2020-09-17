@@ -23,4 +23,5 @@ input {
 input:focus {
   outline: none;
   border: 2px solid #e4ecec;
+  padding: 0 14px 0 14px;
 }
