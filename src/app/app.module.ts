@@ -9,6 +9,7 @@ import { EstablishmentsComponent } from './establishments/establishments.compone
 import { EstablishmentItemComponent } from './establishments/establishment-item/establishment-item.component';
 import { EstablishmentDetailComponent } from './establishments/establishment-detail/establishment-detail.component';
 import { CardComponent } from './card/card.component';
+import { TextInputComponent } from './text-input/text-input.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { CardComponent } from './card/card.component';
     EstablishmentItemComponent,
     EstablishmentDetailComponent,
     CardComponent,
+    TextInputComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],

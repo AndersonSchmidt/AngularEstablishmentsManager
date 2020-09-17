@@ -1,0 +1,25 @@
+div {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 4px;
+  font-family: "Rounded-Medium";
+  font-size: 14px;
+}
+
+input {
+  height: 40px;
+  border: 1px solid #e4ecec;
+  border-radius: 5px;
+  padding: 0 15px 0 15px;
+  font-family: "Rounded-Medium";
+  font-size: 14px;
+  color: #81879d;
+}
+
+input:focus {
+  outline: none;
+  border: 2px solid #e4ecec;
+}
