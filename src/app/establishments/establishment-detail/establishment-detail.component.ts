@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { EstablishmentService } from '../establishment.service';
 import { Establishment } from '../establishment.model';
 import { ActivatedRoute, Router } from '@angular/router';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-establishment-detail',
@@ -34,5 +35,6 @@ export class EstablishmentDetailComponent implements OnInit {
 
   onSubmit(): void {
     this.establishmentService.saveEstablishment(this.establishment);
+    Swal.fire('Pronto!', 'Todas as alterações foram salvas!', 'success');
   }
 }
