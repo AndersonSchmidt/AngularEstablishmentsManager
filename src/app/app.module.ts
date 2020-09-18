@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { RouteReuseStrategy } from '@angular/router';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -12,6 +13,7 @@ import { EstablishmentDetailComponent } from './establishments/establishment-det
 import { CardComponent } from './card/card.component';
 import { TextInputComponent } from './text-input/text-input.component';
 import { ButtonComponent } from './button/button.component';
+import { CustomReuseStrategy } from './reuse-strategy';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,7 @@ import { ButtonComponent } from './button/button.component';
     ButtonComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
-  providers: [],
+  providers: [{ provide: RouteReuseStrategy, useClass: CustomReuseStrategy }],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
