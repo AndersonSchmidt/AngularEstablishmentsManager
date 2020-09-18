@@ -9,36 +9,29 @@ import { Establishment } from './establishment.model';
 export class EstablishmentService {
   establishments: Establishment[];
 
-  establishmentsChanged: Subject<Establishment[]> = new Subject<
-    Establishment[]
-  >();
+  establishmentsChanged: Subject<Establishment[]> = new Subject<Establishment[]>();
 
   constructor(private http: HttpClient) {
-    this.establishmentsChanged.subscribe((establishments) => {
+    this.establishmentsChanged.subscribe((establishments: Establishment[]) => {
       this.establishments = establishments;
     });
   }
 
-  getEstablishments(): void {
+  loadEstablishments(): void {
     this.http
       .get<Establishment[]>(
         'https://my-json-server.typicode.com/james-delivery/frontend-challenge/establishments'
       )
-      .subscribe((establishments) => {
+      .subscribe((establishments: Establishment[]) => {
         this.mergeEstablishments(establishments);
       });
   }
 
   getEstablishment(id: string): Observable<Establishment> {
-    const savedEstablishments =
-      JSON.parse(localStorage.getItem('establishments')) || [];
-
-    const establishment = savedEstablishments.find((estab) => {
-      return estab.id === id;
-    });
-    if (establishment) {
+    const savedEstablishment = this.getSavedEstablishment(id);
+    if (savedEstablishment) {
       return new Observable<Establishment>((observer) => {
-        observer.next(establishment);
+        observer.next(savedEstablishment);
       });
     } else {
       return this.http.get<Establishment>(
@@ -49,8 +42,7 @@ export class EstablishmentService {
   }
 
   saveEstablishment(establishment: Establishment): void {
-    const savedEstablishments =
-      JSON.parse(localStorage.getItem('establishments')) || [];
+    const savedEstablishments = this.getSavedEstablishments();
     const index = savedEstablishments.findIndex(
       (estab) => estab.id === establishment.id
     );
@@ -66,8 +58,7 @@ export class EstablishmentService {
   }
 
   mergeEstablishments(establishments: Establishment[]): void {
-    const savedEstablishments =
-      JSON.parse(localStorage.getItem('establishments')) || [];
+    const savedEstablishments = this.getSavedEstablishments();
     for (let i = 0; i < savedEstablishments.length; i++) {
       for (let j = 0; j < establishments.length; j++) {
         if (savedEstablishments[i].id === establishments[j].id) {
@@ -77,5 +68,16 @@ export class EstablishmentService {
       }
     }
     this.establishmentsChanged.next(establishments);
+  }
+
+  getSavedEstablishments(): Establishment[] {
+    return JSON.parse(localStorage.getItem('establishments')) || [];
+  }
+
+  getSavedEstablishment(id: string): Establishment {
+    const savedEstablishments = this.getSavedEstablishments();
+    return savedEstablishments.find((estab) => {
+      return estab.id === id;
+    });
   }
 }

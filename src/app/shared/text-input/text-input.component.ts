@@ -1,11 +1,11 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-text-input',
   templateUrl: './text-input.component.html',
   styleUrls: ['./text-input.component.css'],
 })
-export class TextInputComponent implements OnInit {
+export class TextInputComponent {
   @Input() label: string;
   @Input() id: string;
   @Input() containerStyle: string;
@@ -13,6 +13,4 @@ export class TextInputComponent implements OnInit {
   @Output() inputModelChange = new EventEmitter<string>();
 
   constructor() {}
-
-  ngOnInit(): void {}
 }

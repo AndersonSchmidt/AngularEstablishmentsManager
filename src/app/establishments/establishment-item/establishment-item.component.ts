@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Establishment } from '../establishment.model';
 import { Router } from '@angular/router';
 
@@ -7,7 +7,7 @@ import { Router } from '@angular/router';
   templateUrl: './establishment-item.component.html',
   styleUrls: ['./establishment-item.component.css'],
 })
-export class EstablishmentItemComponent implements OnInit {
+export class EstablishmentItemComponent {
   @Input() establishment: Establishment;
 
   cardStyle = {
@@ -18,8 +18,6 @@ export class EstablishmentItemComponent implements OnInit {
   };
 
   constructor(private router: Router) {}
-
-  ngOnInit(): void {}
 
   onClick(): void {
     this.router.navigate(['establishments', this.establishment.id]);

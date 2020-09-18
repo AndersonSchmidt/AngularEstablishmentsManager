@@ -5,5 +5,4 @@ export class Establishment {
   email: string;
   phone: string;
   address: string;
-  registered: string;
 }

@@ -17,6 +17,6 @@ export class EstablishmentsComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.establishmentService.getEstablishments();
+    this.establishmentService.loadEstablishments();
   }
 }
