@@ -1,6 +1,6 @@
 .picture-container {
-  width: 60px;
-  height: 60px;
+  min-width: 60px;
+  min-height: 60px;
   border-radius: 3px;
   overflow: hidden;
   margin-right: 20px;
