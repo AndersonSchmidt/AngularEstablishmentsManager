@@ -33,6 +33,6 @@ export class EstablishmentDetailComponent implements OnInit {
   }
 
   onSubmit(): void {
-    console.log(this.establishment);
+    this.establishmentService.saveEstablishment(this.establishment);
   }
 }

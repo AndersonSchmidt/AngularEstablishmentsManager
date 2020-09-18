@@ -10,13 +10,13 @@ import { Establishment } from './establishment.model';
 export class EstablishmentsComponent implements OnInit {
   establishments: Establishment[];
 
-  constructor(private establishmentService: EstablishmentService) {}
+  constructor(private establishmentService: EstablishmentService) {
+    this.establishmentService.establishmentsChanged.subscribe(
+      (establishments) => (this.establishments = establishments)
+    );
+  }
 
   ngOnInit(): void {
-    this.establishmentService
-      .getEstablishments()
-      .subscribe((establishments) => {
-        this.establishments = establishments;
-      });
+    this.establishmentService.getEstablishments();
   }
 }
