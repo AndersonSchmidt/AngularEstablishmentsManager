@@ -1,8 +1,13 @@
 <div class="container">
-  <div *ngFor="let establishment of establishments" class="row">
-    <div class="col">
-      <app-establishment-item [establishment]="establishment">
-      </app-establishment-item>
+  <ng-container *ngIf="establishments">
+    <div *ngFor="let establishment of establishments" class="row">
+      <div class="col">
+        <app-establishment-item [establishment]="establishment">
+        </app-establishment-item>
+      </div>
     </div>
+  </ng-container>
+  <div class="col-md-4 offset-md-4 text-center" *ngIf="!establishments">
+    <app-spinner></app-spinner>
   </div>
 </div>

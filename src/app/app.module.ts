@@ -14,6 +14,7 @@ import { CardComponent } from './card/card.component';
 import { TextInputComponent } from './text-input/text-input.component';
 import { ButtonComponent } from './button/button.component';
 import { CustomReuseStrategy } from './reuse-strategy';
+import { SpinnerComponent } from './spinner/spinner.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { CustomReuseStrategy } from './reuse-strategy';
     CardComponent,
     TextInputComponent,
     ButtonComponent,
+    SpinnerComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
   providers: [{ provide: RouteReuseStrategy, useClass: CustomReuseStrategy }],
